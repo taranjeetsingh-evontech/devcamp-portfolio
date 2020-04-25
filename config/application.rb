@@ -27,5 +27,7 @@ module DevcampPortfolio
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    # Never set this permit_all_parameters as true
+    # config.action_controller.permit_all_parameters = true
   end
 end
