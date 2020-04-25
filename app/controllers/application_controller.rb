@@ -12,9 +12,5 @@ class ApplicationController < ActionController::Base
   # 	devise_parameter_sanitizer.permit(:account_update, keys: [:name])
   # end
   include DeviseWhitelist
-  before_action :set_source
-
-  def set_source
-  	session[:source] = params[:q] if params[:q]
-  end
+  include SetSource
 end
