@@ -18,6 +18,7 @@ module ApplicationHelper
 
 	def copyright_generator
 		# LearningViewTool::Renderer.copyright 'Rails community', 'All rights reserved'
+		#This is coming from a gem file which was created for copyright purpose
 		DevcampViewTool::Renderer.copyright 'Rails community', 'All rights reserved'
 	end
 end
