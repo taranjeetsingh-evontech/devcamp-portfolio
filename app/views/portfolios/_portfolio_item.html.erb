@@ -1,11 +1,11 @@
-	<!--<p><%#= link_to portfolio_item.title, portfolio_path(portfolio_item) %></p>--><!-- This used default show route for portfolio -->
-
-	<p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></p><!-- This uses customized show route for portfolio -->
-
-	<p><%= portfolio_item.subtitle %></p>
-
-	<p><%= portfolio_item.body %></p>
-
+<div class="card">
 	<%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
-	<%= link_to "Edit", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
-	<%= link_to 'Delete portfolio Item', portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
+	<p class="card-text">
+		<!--<%#= link_to portfolio_item.title, portfolio_path(portfolio_item) %> This used default show route for portfolio -->
+		<!-- This below link uses the customized show route for portfolio -->
+		<span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span> <%= portfolio_item.subtitle %>
+	</p>
+</div>
+
+	<%#= link_to "Edit", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
+	<%#= link_to 'Delete portfolio Item', portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>

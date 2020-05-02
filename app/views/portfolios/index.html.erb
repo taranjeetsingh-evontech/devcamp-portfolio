@@ -1,11 +1,12 @@
-<h1>Portfolio Items</h1>
+<div class="album text-muted">
+  <div class="container">
 
-<%= link_to "Create New Item", new_portfolio_path if logged_in?(:site_admin) %>
+    <div class="row">
 
-<!-- <p>
-	<%#= new_portfolio_path %><br/>
-	<%#= new_portfolio_url %>
-</p> -->
+			<%#= link_to "Create New Item", new_portfolio_path if logged_in?(:site_admin) %>
 
-<!-- Here we'r manually configuring rails to work with partials because in this case we did'nt follow standard rails naming convention as in blogs, so it won't loop automatically until we specify in the foll. manner -->
-<%= render  partial: 'portfolio_item', collection: @portfolio_items %>
+			<!-- Here we'r manually configuring rails to work with partials because in this case we did'nt follow standard rails naming convention as in blogs, so it won't loop automatically until we specify in the foll. manner -->
+			<%= render  partial: 'portfolio_item', collection: @portfolio_items %>
+		</div>
+	</div>
+</div>
