@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   # devise_for :users
   #Implementing custom routes for devise so that we can use our own urls for sign_in/sign_out/sign_up
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
