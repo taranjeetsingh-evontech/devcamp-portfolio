@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # get 'topics/index'
+  # get 'topics/show'
+  resources :topics, only: [:index, :show]
+
   # resources :comments
   # devise_for :users
   #Implementing custom routes for devise so that we can use our own urls for sign_in/sign_out/sign_up
