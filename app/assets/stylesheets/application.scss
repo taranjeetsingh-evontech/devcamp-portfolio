@@ -237,3 +237,8 @@ body {
 .app-card-container a {
   color: blue;
 }
+
+.collapse > .card-body {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
