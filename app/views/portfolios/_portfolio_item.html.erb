@@ -1,11 +1,13 @@
-<div class="card" data-id="<%= portfolio_item.id %>">
-	<%#= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
-	<%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb') %>
-	<p class="card-text">
-		<!--<%#= link_to portfolio_item.title, portfolio_path(portfolio_item) %> This used default show route for portfolio -->
-		<!-- This below link uses the customized show route for portfolio -->
-		<span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span> <%= portfolio_item.subtitle %>
-	</p>
+<div class="col-md-4">
+	<div class="card" data-id="<%= portfolio_item.id %>">
+		<%#= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
+		<%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%' %>
+		<p class="card-text">
+			<!--<%#= link_to portfolio_item.title, portfolio_path(portfolio_item) %> This used default show route for portfolio -->
+			<!-- This below link uses the customized show route for portfolio -->
+			<span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span> <%= portfolio_item.subtitle %>
+		</p>
+	</div>
 </div>
 
 	<%#= link_to "Edit", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
